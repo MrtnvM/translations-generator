@@ -1,5 +1,5 @@
 {
-  "name": "translations-generator",
+  "name": "ts-translations-generator",
   "version": "1.0.0",
   "description": "Generate type-checked translations from JSON files",
   "main": "bin/index.js",
