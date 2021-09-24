@@ -1,7 +1,8 @@
+/* eslint-disable */
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const getTranslations = (translate) => {
+const getTranslations = (translate: (key: string) => string) => {
   return {
     demo: {
       title: () => translate('demo.title'),
@@ -15,6 +16,6 @@ const getTranslations = (translate) => {
 
 export const useTranslations = () => {
   const { t: translate } = useTranslation();
-  const translations = useMemo(() => getTranslations(translate));
+  const translations = useMemo(() => getTranslations(translate), [translate]);
   return translations;
 };

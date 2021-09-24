@@ -29,16 +29,17 @@ const generateTranslations = (translationsPath) => {
         }
         return '';
     };
-    const generatedCode = `import { useMemo } from 'react';
+    const generatedCode = `/* eslint-disable */
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const getTranslations = (translate) => {
+const getTranslations = (translate: (key: string) => string) => {
   return ${processNode(translations, [])};
 };
 
 export const useTranslations = () => {
   const { t: translate } = useTranslation();
-  const translations = useMemo(() => getTranslations(translate));
+  const translations = useMemo(() => getTranslations(translate), [translate]);
   return translations;
 };
 `;
