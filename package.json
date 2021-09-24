@@ -1,5 +1,5 @@
 {
-  "name": "translations-generator",
+  "name": "@max.mrtnv/translations-generator",
   "version": "1.0.0",
   "description": "Generate type-checked translations from JSON files",
   "main": "bin/index.js",
@@ -18,10 +18,21 @@
     "yargs": "^17.2.0"
   },
   "bin": {
-    "generate-translations": "./bin/index.js"
+    "generate-translations": "bin/index.js"
   },
   "devDependencies": {
     "@types/node": "^16.9.6",
     "@types/yargs": "^17.0.3"
-  }
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MrtnvM/translations-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrtnvM/translations-generator/issues"
+  },
+  "homepage": "https://github.com/MrtnvM/translations-generator#readme"
 }
